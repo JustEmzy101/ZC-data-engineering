@@ -1,0 +1,47 @@
+# ============================================
+# 🔒 SECURITY / SENSITIVE FILES
+# ============================================
+
+# Ignore all keys directories and files
+keys/
+**/keys/
+**/keys.*
+**/*_keys.*
+/my-creds.json
+Terraform/keys/my-creds.json
+# Ignore all environment variable files
+**/*.env
+
+# ============================================
+# 🧠 PYTHON BUILD / CACHE / LOG FILES
+# ============================================
+
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+logs/
+
+# ============================================
+# ☁️ CLOUD & GCP RELATED FILES
+# ============================================
+
+gcp/
+**/gcp_credentials.*
+**/gcp_key.*
+
+# ============================================
+# 🏗️ TERRAFORM FILES
+# ============================================
+
+# Local Terraform directories
+.terraform/
+.terraform.lock.hcl
+
+# State files (do NOT commit these)
+*.tfstate
+*.tfstate.*
+crash.log
+
+# Auto-generated plan an
