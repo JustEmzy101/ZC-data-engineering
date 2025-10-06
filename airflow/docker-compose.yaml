@@ -84,7 +84,7 @@ x-airflow-common:
     # Path to mounted service account key inside containers. Place your
     # service account JSON at ./gcp/key.json on the host (project root) or
     # point a host path directly (see volumes below).
-    GOOGLE_APPLICATION_CREDENTIALS: '/opt/airflow/gcp/google_credentials.json'
+  
     # The following line can be used to set a custom config file, stored in the local config folder
     AIRFLOW_CONFIG: '/opt/airflow/config/airflow.cfg'
   volumes:
