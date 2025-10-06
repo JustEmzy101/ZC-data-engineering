@@ -62,9 +62,9 @@ x-airflow-common:
     AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION: 'true'
     AIRFLOW__CORE__LOAD_EXAMPLES: 'false'
     AIRFLOW__CORE__EXECUTION_API_SERVER_URL: 'http://airflow-apiserver:8080/execution/'
-    GCP_PROJECT_ID: 'strong-kit-471914-j0'
-    GCP_GCS_BUCKET: 'strong-kit-471914-j0-data-bucket'
-    AIRFLOW_CONN_GOOGLE_CLOUD_DEFAULT: 'google-cloud-platform://?extra__google_cloud_platform__key_path=/opt/airflow/google_credentials.json'
+    GCP_PROJECT_ID: "${GCP_PROJECT_ID}"
+    GCP_GCS_BUCKET: "${GCP_GCS_BUCKET}"
+    AIRFLOW_CONN_GOOGLE_CLOUD_DEFAULT: "${AIRFLOW_CONN_GOOGLE_CLOUD_DEFAULT}"
     PG_HOST: "${PG_HOST}"
     PG_USER: "${PG_USER}"
     PG_PASSWORD: "${PG_PASSWORD}"
@@ -92,7 +92,7 @@ x-airflow-common:
     - ${AIRFLOW_PROJ_DIR:-.}/logs:/opt/airflow/logs
     - ${AIRFLOW_PROJ_DIR:-.}/config:/opt/airflow/config
     - ${AIRFLOW_PROJ_DIR:-.}/plugins:/opt/airflow/plugins
-    - "C:\\Users\\mmzid\\.google\\credentials\\google_credentials.json:/opt/airflow/gcp/google_credentials.json:ro"
+    - "${LOCAL_SECRETS_DIR}:/opt/airflow/gcp/google_credentials.json:ro"
 
 
   user: "${AIRFLOW_UID:-50000}:0"
