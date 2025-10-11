@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: staging
+    database: strong-kit-471914-j0
+    schema: staging_dataset
+
+    tables:
+      - name: output_2024-11
+
+      - name: output_2024-12
